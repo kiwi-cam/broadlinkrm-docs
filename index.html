@@ -924,6 +924,30 @@
 <td>No</td>
 <td>Yes</td>
 </tr>
+  <tr>
+<td><code>alwaysResetToDefaults</code></td>
+<td>If set, the fanSpeed is reset to its default when the fan is turned off.</td>
+<td>true</td>
+<td>false</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+  <tr>
+<td><code>defaultFanSpeed</code></td>
+<td>Sets the default Speed for the fan when a value isn't already set.</td>
+<td>50</td>
+<td>100</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+  <tr>
+<td><code>stepSize</code></td>
+<td>If set, sets the amount the fanSpeed will step up/down by.</td>
+<td>10</td>
+<td>1</td>
+<td>No</td>
+<td>Yes</td>
+</tr>  
 </tbody></table>
 <h3 id='quot-data-quot-key-value-object-3'>&quot;data&quot; key-value object</h3>
 <table><thead>
@@ -1470,6 +1494,39 @@
 <td>No</td>
 <td>No</td>
 </tr>
+  
+<tr>
+<td><code>w1DeviceID</code></td>
+<td>Updates device current temperature from a Raspberry Pi Wire-1 thermometers (i.e. ds18b20). Value is the Device ID.</td>
+<td>28-0321544e531ff</td>
+<td>-</td>
+<td>No</td>
+<td>No</td>
+</tr>
+  <tr>
+<td><code>heatOnly</code></td>
+<td>Forces the Aircon accessory to only operate in Heat mode.</td>
+<td>true</td>
+<td>false</td>
+<td>No</td>
+<td>No</td>
+</tr>
+  <tr>
+<td><code>coolOnly</code></td>
+<td>Forces the Aircon accessory to only operate in Cool mode.</td>
+<td>true</td>
+<td>false</td>
+<td>No</td>
+<td>No</td>
+</tr>
+  <tr>
+<td><code>noHumidity</code></td>
+<td>Removes Humidity information from the device.</td>
+<td>true</td>
+<td>false</td>
+<td>No</td>
+<td>No</td>
+</tr>
 </tbody></table>
 <h3 id='mqtt-temperature-support'>mqtt temperature support</h3>
 <p>You may subscribe to an mqtt topic to receive temperaturee updates. To do so you must specify the following configuration options:</p>
@@ -1510,8 +1567,12 @@
 <td><code>temperatureX</code></td>
 <td>Where X is any temperature you wish to support e.g. <code>temperature30</code>. See below.</td>
 </tr>
+<tr>
+<td><code>modeX</code></td>
+<td>A hex code string where X is any temperture, and mode is one of "heat","cool", or "auto". Hex code used to set unit to the specified mode and temperature. <code>heat30</code>. See below.</td>
+</tr>
 </tbody></table>
-<h3 id='quot-temperaturex-quot-key-value-object'>&quot;temperatureX&quot; key-value object</h3>
+<h3 id='quot-temperaturex-quot-key-value-object'>&quot;temperatureX&quot; and &quot;modeX&quot; key-value object</h3>
 <table><thead>
 <tr>
 <th>key</th>
