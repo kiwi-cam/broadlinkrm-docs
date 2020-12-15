@@ -391,6 +391,9 @@
             <a href="#air-conditioner" class="toc-h2 toc-link" data-title="air-conditioner">air-conditioner</a>
           </li>
           <li>
+            <a href="#humidifier-dehumidifier" class="toc-h2 toc-link" data-title="humidifier-dehumidifier">humidifier-dehumidifier</a>
+          </li>
+          <li>
             <a href="#learn-code" class="toc-h2 toc-link" data-title="learn-code">learn-code</a>
           </li>
         </ul>
@@ -1849,6 +1852,79 @@
               For graphical purposes only (hence use of the term &quot;pseudo&quot;). By default this will use the
               current temperature and the target temperature to determine whether to set the mode as <code>heat</code>
               or <code>cool</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
+      <p>Adds a humidifier/dehumidifer accessory.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>default</th>
+            <th>required</th>
+            <th>unit tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>deHumifierOnly</code></td>
+            <td>Sets the device to only run in Dehumidifer mode</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>humifierOnly</code></td>
+            <td>Sets the device to only run in Humidifer mode</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>threshold</code></td>
+            <td>Sets how close to the target humidity the device should try to get</td>
+            <td>2</td>
+            <td>5</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>noHumidity</code></td>
+            <td>Removes Humidity information from the device. </td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>humidityAdjustment</code></td>
+            <td>An adjustment value to tune the value from the value the broadlink returns</td>
+            <td>-5</td>
+            <td>0</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>humidityFilePath</code></td>
+            <td>path to a local file that Humidity readings can come from</td>
+            <td>/var/tmp/humidity.txt</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>data>fanOnly</code></td>
+            <td>Hex code used to disable both Humidifer and Dehumifier functions</td>
+            <td>0020000...</td>
+            <td>off code used if not supplied</td>
+            <td>No</td>
+            <td>Yes</td>
           </tr>
         </tbody>
       </table>
