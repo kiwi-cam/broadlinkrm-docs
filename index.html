@@ -402,6 +402,7 @@
     </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192.168.1.76"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"mac"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34:ea:34:e7:d7:28"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"isRFSupported"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"isRM4"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">],</span><span class="w">
 </span><span class="err">...</span><span class="w">
@@ -409,6 +410,32 @@
 <p>Generally Broadlink RM devices should be detected automatically. I&#39;ve resolved many issues related to this in recent releases however if your network doesn&#39;t support UDP for whatever reason then your device still won&#39;t be discovered.</p>
 
 <p>To help combat this there&#39;s a <code>&quot;hosts&quot;</code> option that can be defined at the top level of the plugin config.</p>
+<table><thead>
+<tr>
+<th>key</th>
+<th>description</th>
+<th>example</th>
+<th>default</th>
+<th>required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>isRFSupported</code></td>
+<td>Forces the device to support RF signals.</td>
+<td>true</td>
+<td>false</td>
+<td>-</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>isRM4</code></td>
+<td>Marks the device as a newer RM4 device and sends data with required new headers.</td>
+<td>true</td>
+<td>false</td>
+<td>-</td>
+<td>No</td>
+</tr>
+</tbody></table>
 <h1 id='hex-codes'>Hex Codes</h1><h2 id='learning-ir-and-rf-hex-codes'>Learning IR and RF hex codes</h2>
 <blockquote>
 <p>Example &quot;Learn IR&quot; Logs</p>
