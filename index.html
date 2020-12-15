@@ -340,14 +340,22 @@
 <p>Working on open source projects like this is full-time for me so every bit helps.</p>
 
 <p>Thank you, sincerely!</p>
-<h2 id='newsletter'>Newsletter</h2>
-<p>You can keep informed about HomeKit, homebridge and homebridge plugins by subscribing to my <a href="http://workswith.io">Works with</a> newsletter.</p>
 <h1 id='requirements'>Requirements</h1>
 <ul>
 <li>Requires Node.js &gt;= 7.6.0</li>
 <li>If you&#39;re seeing something like <code>ERROR LOADING PLUGIN&quot;...&quot;async setCharacteristicValue (props, value, callback) {</code> then please check your node version before creating a new issue: <code>node -v</code>.</li>
 <li>There&#39;s a lot of people here who have never seen config files like these before, so here&#39;s a quick tip; when you have the option of putting true or false as a value, do not put quotation marks around it. e.g. { example: false } not { example: &quot;false&quot; }.</li>
 </ul>
+        
+        <h2 id='4.3.1notes'>Version 4.3.1+ notes</h2>
+<p>There are a couple of changes made in version 4.3.1 which might cause issues when you upgrade.<br /></p>
+        <ul>
+<li>There was a bug in how MAC addresses were stored in the plugin. If you specify a HOST in your config.json by MAC address, you'll likely need to correct this value after you update.</li>
+<li>In order to fix an issue in iOS 14, all TVs are now seperate accessories. Previously the first TV connected via Homebridge as a bridge. This means that after updating, that first TV will need to be removed and re-added to HomeKit.</li>
+<li>The Dehumidifer accessory has been updated to use the Humidity readings from your Broadlink device. If your Broadlink device doesn't support Humidity readings, or you don't want to functionality set `"noHumidity" : true` in your config.json</li>
+        </ul>
+        
+<p>For other changes, refer to the Change Log [here](https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/CHANGELOG.md).</p>
 <h1 id='installation'>Installation</h1>
 <blockquote>
 <p>Example BroadlinkRM platform in the homebridge configuration:</p>
@@ -373,7 +381,7 @@
 </span></code></pre>
 <ol>
 <li>Install homebridge using the <a href="https://github.com/nfarina/homebridge">directions on the project page</a></li>
-<li>Install this plugin using: <code>npm install -g homebridge-broadlink-rm</code></li>
+<li>Install this plugin using: <code>npm install -g homebridge-broadlink-rm-pro</code></li>
 <li>Update your homebridge <code>config.json</code> file. See <a href="config-sample.json">config-sample.json</a> for examples.</li>
 </ol>
 
