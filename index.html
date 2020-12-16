@@ -394,6 +394,12 @@
             <a href="#humidifier-dehumidifier" class="toc-h2 toc-link" data-title="humidifier-dehumidifier">humidifier-dehumidifier</a>
           </li>
           <li>
+            <a href="#temperaturesensor" class="toc-h2 toc-link" data-title="temperaturesensor">temperaturesensor</a>
+          </li>
+          <li>
+            <a href="#humiditysensor" class="toc-h2 toc-link" data-title="humiditysensor">humiditysensor</a>
+          </li>
+          <li>
             <a href="#learn-code" class="toc-h2 toc-link" data-title="learn-code">learn-code</a>
           </li>
         </ul>
@@ -1857,7 +1863,6 @@
       </table>
       <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
       <p>Adds a humidifier/dehumidifer accessory.</p>
-
       <table>
         <thead>
           <tr>
@@ -1914,6 +1919,166 @@
             <td><code>humidityFilePath</code></td>
             <td>path to a local file that Humidity readings can come from</td>
             <td>/var/tmp/humidity.txt</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttURL</code></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>mqtt://localhost</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttTopic</code></td>
+            <td>HThe mqtt topic for humidity data</td>
+            <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>data>fanOnly</code></td>
+            <td>Hex code used to disable both Humidifer and Dehumifier functions</td>
+            <td>0020000...</td>
+            <td>off code used if not supplied</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id='temperaturesensor'>TemperatureSensor</h2>
+      <p>Adds a Temperature and Humidity Sensor accessory using the Broadlink device's sensors.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>default</th>
+            <th>required</th>
+            <th>unit tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>noHumidity</code></td>
+            <td>Removes Humidity information from the device. </td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>temperatureAdjustment</code></td>
+            <td>An adjustment value to tune the value from the value returned</td>
+            <td>-5</td>
+            <td>0</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>humidityAdjustment</code></td>
+            <td>An adjustment value to tune the value from the value returned</td>
+            <td>-5</td>
+            <td>0</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>temperatureFilePath</code></td>
+            <td>Path to a local file that Humidity readings can come from. File can contain either a single number (interpretted as Temperature) or lines with values prefixed by <code>temperature:</code>, <code>humidity:</code>, or <code>battery:</code></td>
+            <td>/var/tmp/humidity.txt</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>batteryAlerts</code></td>
+            <td>Sets whether battery levels are monitored (using battery:XX in temperatureFilePath). Adds some HAP Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file or MQTT to include 'battery' field.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttURL</code></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>mqtt://localhost</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttTopic</code></td>
+            <td>HThe mqtt topic for humidity data</td>
+            <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>data>fanOnly</code></td>
+            <td>Hex code used to disable both Humidifer and Dehumifier functions</td>
+            <td>0020000...</td>
+            <td>off code used if not supplied</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id='humiditysensor'>Humidity Sensor</h2>
+      <p>Adds a humidity sensor using the Broadlink device's sensors.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>default</th>
+            <th>required</th>
+            <th>unit tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>humidityAdjustment</code></td>
+            <td>An adjustment value to tune the value from the value the broadlink returns</td>
+            <td>-5</td>
+            <td>0</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>humidityFilePath</code></td>
+            <td>Path to a local file that Humidity readings can come from. Needs to be either a single number (used as humidity) or humidity:XX battery:XX</td>
+            <td>/var/tmp/humidity.txt</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>batteryAlerts</code></td>
+            <td>Sets whether battery levels are monitored (using battery:XX in humidityFilePath). Adds some HAP Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file or MQTT to include 'battery' field.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttURL</code></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>mqtt://localhost</td>
+            <td>-</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttTopic</code></td>
+            <td>HThe mqtt topic for humidity data</td>
+            <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
             <td>-</td>
             <td>No</td>
             <td>Yes</td>
