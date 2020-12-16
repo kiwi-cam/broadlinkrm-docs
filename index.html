@@ -1226,7 +1226,7 @@
           </tr>
           <tr>
             <td><code>swingToggle</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off.
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off. Not supported when using <code>&quot;type&quot;: &quot;fanv1&quot;</code>
             </td>
           </tr>
           <tr>
@@ -1237,6 +1237,26 @@
         </tbody>
       </table>
       <h2 id='light'>light</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Light"</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"light"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brightness20"</span><span class="p">:</span><span class="w"></span><span class="s2">"BRIGHTNESS20_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brightness60"</span><span class="p">:</span><span class="w"></span><span class="s2">"BRIGHTNESS60_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brightness100"</span><span class="p">:</span><span class="w"></span><span class="s2">"BRIGHTNESS100_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hue20"</span><span class="p">:</span><span class="w"></span><span class="s2">"HUE20_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hue60"</span><span class="p">:</span><span class="w"></span><span class="s2">"HUE60_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hue100"</span><span class="p">:</span><span class="w"></span><span class="s2">"HUE100_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Turn the light on and the <code>defaultBrightness</code> is set unless <code>useLastKnownBrightness</code> is
         set to true in which case the last brightness that was set will be used.</p>
 
@@ -1363,6 +1383,23 @@
         </tbody>
       </table>
       <h2 id='garage-door-opener'>garage-door-opener</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Garage Door</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"garage-door-opener"</span><span class="w">
+      </span><span class="s2">"openCloseDuration"</span><span class="p">:</span><span class="w"> </span><span class="p">8</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPEN_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"close"</span><span class="p">:</span><span class="w"></span><span class="s2">"CLOSE_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lock"</span><span class="p">:</span><span class="w"></span><span class="s2">"LOCK_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unlock"</span><span class="p">:</span><span class="w"></span><span class="s2">"UNLOCK_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Set the switch to open and the <code>open</code> hex code is sent, set it to close and the <code>close</code>
         hex code is sent.</p>
 
@@ -1455,7 +1492,21 @@
           </tr>
         </tbody>
       </table>
-      <h2 id='lock'>lock</h2>
+      <h2 id='lock'>lock</h2>      
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Lock</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"lock"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"lock"</span><span class="p">:</span><span class="w"></span><span class="s2">"LOCK_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unlock"</span><span class="p">:</span><span class="w"></span><span class="s2">"UNLOCK_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Set the switch to unlock and the <code>unlock</code> hex code is sent, set it to lock and the <code>lock</code>
         hex code is sent.</p>
 
@@ -1528,6 +1579,23 @@
         </tbody>
       </table>
       <h2 id='window-covering'>window-covering</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Blinds</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"window-covering"</span><span class="w">
+      </span><span class="s2">"totalDurationOpen"</span><span class="p">:</span><span class="w"> </span><span class="p">45</span><span class="w">
+      </span><span class="s2">"totalDurationClose"</span><span class="p">:</span><span class="w"> </span><span class="p">40</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPEN_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"close"</span><span class="p">:</span><span class="w"></span><span class="s2">"CLOSE_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"stop"</span><span class="p">:</span><span class="w"></span><span class="s2">"STOP_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>The window-covering accessory designed to be used by IR/RF controlled blinds/shades/shutters.</p>
 
       <p>The accessory will determine how long the window-covering should continue opening/closing for based on the
@@ -1640,6 +1708,21 @@
         </tbody>
       </table>
       <h2 id='air-conditioner'>air-conditioner</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Air Conditioner</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"air-conditioner"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"temperature30"</span><span class="p">:</span><span class="w"></span><span class="s2">"30_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"temperature16"</span><span class="p">:</span><span class="w"></span><span class="s2">"16_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>This allows you to send a hex code for any temperature that you&#39;ve defined a hex code for. If you simply
         want to heat up or cool down a room (and not learn every single temperature code) you can just set hex codes for
         the lowest and highest temperatures and those will be used whatever temperature you request.</p>
@@ -1951,6 +2034,24 @@
         </tbody>
       </table>
       <h2 id='heatercooler'>heatercooler</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Heater Cooler</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"heater-cooler"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"on"</span><span class="p">:</span><span class="w"></span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"temperatureCodes"</span><span class="p">:</span><span class="w"></span><span class="p">{</span><span class="w">
+          </span><span class="s2">"16"</span><span class="p">:</span><span class="w"></span><span class="s2">"16_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"16"</span><span class="p">:</span><span class="w"></span><span class="s2">"24_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Implementation of heater cooler accessory specification as per Apple HAP. Heater cooler allows for better representation of standalone heaters and air-conditioners that support functions like oscillation and fan speed.</p>
       <p>In addition to the fan speed and oscillation features, this accessory also supports temperature in both degree Celsius and Fahrenheit.</p>
       <p><img src="https://camo.githubusercontent.com/d75d5243a6865e2946fa4266738105ae1af6d3d9e91b34ac66042dc8274ef8f3/68747470733a2f2f6a2e676966732e636f6d2f766c565252302e676966" alt="Home app heater cooler UI in action" data-canonical-src="https://j.gifs.com/vlVRR0.gif" style="max-width:100%;" width="150"></p>
