@@ -1098,6 +1098,27 @@
         </tbody>
       </table>
       <h2 id='fan'>fan</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Fan"</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"fan"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"clockwise"</span><span class="p">:</span><span class="w"></span><span class="s2">"CLOCKWISE_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"counterClockwise"</span><span class="p">:</span><span class="w"></span><span class="s2">"COUNTERCLOCKWISE_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"SWING_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fanSpeed20"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN20_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fanSpeed60"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN60_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fanSpeed100"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN100_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
+      <p>Turn the outlet on
       <p>Turn the fan on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is
         sent.</p>
 
@@ -1106,6 +1127,8 @@
       <p>If you don&#39;t specify every fan speed then the accessory will choose the hex code of the fan speed closest
         to the one requested. e.g. If you only specify fan speeds of 10%, 50% and 100% then ask &quot;Set Fan to
         40%&quot; then the hex code for 50% will be used.</p>
+
+      <p>There is also a type &quot;fanv1&quot; which is the older HomeKit fan. This type doesn&#39;t support <code>swingMode</code> but HomeKit gives more icon options.</p>
 
       <table>
         <thead>
