@@ -391,13 +391,17 @@
             <a href="#air-conditioner" class="toc-h2 toc-link" data-title="air-conditioner">air-conditioner</a>
           </li>
           <li>
-            <a href="#humidifier-dehumidifier" class="toc-h2 toc-link" data-title="humidifier-dehumidifier">humidifier-dehumidifier</a>
+            <a href="#humidifier-dehumidifier" class="toc-h2 toc-link"
+              data-title="humidifier-dehumidifier">humidifier-dehumidifier</a>
           </li>
           <li>
             <a href="#temperaturesensor" class="toc-h2 toc-link" data-title="temperaturesensor">temperaturesensor</a>
           </li>
           <li>
             <a href="#humiditysensor" class="toc-h2 toc-link" data-title="humiditysensor">humiditysensor</a>
+          </li>
+          <li>
+            <a href="#tv" class="toc-h2 toc-link" data-title="tv">tv</a>
           </li>
           <li>
             <a href="#learn-code" class="toc-h2 toc-link" data-title="learn-code">learn-code</a>
@@ -433,7 +437,8 @@
         <li>Requires Node.js &gt;= 7.6.0</li>
         <li>If you&#39;re seeing something like
           <code>ERROR LOADING PLUGIN&quot;...&quot;async setCharacteristicValue (props, value, callback) {</code> then
-          please check your node version before creating a new issue: <code>node -v</code>.</li>
+          please check your node version before creating a new issue: <code>node -v</code>.
+        </li>
         <li>There&#39;s a lot of people here who have never seen config files like these before, so here&#39;s a quick
           tip; when you have the option of putting true or false as a value, do not put quotation marks around it. e.g.
           { example: false } not { example: &quot;false&quot; }.</li>
@@ -501,7 +506,8 @@
 
       <p>If you wish to have multiple &quot;Learn Code&quot; accessories (e.g. for each device) then you can add
         accessories with a type of <code>learn-code</code> and then specify <code>&quot;host&quot;</code> and
-        <code>&quot;name&quot;</code> key/value pairs.</p>
+        <code>&quot;name&quot;</code> key/value pairs.
+      </p>
       <h2 id='device-discovery'>Device Discovery</h2>
       <blockquote>
         <p>Include in the top of the platform config (not in any of the accessories).</p>
@@ -598,10 +604,12 @@
       <h2 id='pronto-ir-codes'>Pronto IR Codes</h2>
       <p>The plugin supports the use of Pronto codes; you can put them wherever you would normally put a Broadlink RM
         generated IR code. Pronto codes are automatically detected by their first 4 characters being 0 i.e.
-        <code>0000</code>.</p>
+        <code>0000</code>.
+      </p>
       <h1 id='advanced-hex-structure'>Advanced Hex Structure</h1>
       <p>Hex objects allow multiple hex codes to be sent with <code>&quot;repeat&quot;</code>,
-        <code>&quot;intervals&quot;</code> and <code>&quot;pause&quot;</code> options.</p>
+        <code>&quot;intervals&quot;</code> and <code>&quot;pause&quot;</code> options.
+      </p>
       <h2 id='repeat'>Repeat</h2>
       <blockquote>
         <p>Example</p>
@@ -629,7 +637,8 @@
 </span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="w">
 </span></code></pre>
       <p>Hex codes can be repeated multiple times. A delay can be added between each send of the hex code by adding an
-        <code>&quot;interval&quot;</code> option.</p>
+        <code>&quot;interval&quot;</code> option.
+      </p>
       <h2 id='repeat-on-off'>Repeat On/Off</h2>
       <blockquote>
         <p>Example</p>
@@ -694,7 +703,8 @@
 </span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_3"</span><span class="w">
 </span></code></pre>
       <p>You may wish for different hex codes to be sent at once. A delay can be added between each hex code by adding a
-        <code>&quot;pause&quot;</code> option.</p>
+        <code>&quot;pause&quot;</code> option.
+      </p>
       <h2 id='multiple-codes-amp-repeats'>Multiple Codes &amp; Repeats</h2>
       <blockquote>
         <p>Example</p>
@@ -848,7 +858,8 @@
           <tr>
             <td><code>onDuration</code></td>
             <td>The amount of time before the switch automatically turns itself off (used in conjunction with
-              <code>enableAutoOff</code>).</td>
+              <code>enableAutoOff</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -865,7 +876,8 @@
           <tr>
             <td><code>offDuration</code></td>
             <td>The amount of time before the switch automatically turns itself on (used in conjunction with
-              <code>enableAutoOn</code>).</td>
+              <code>enableAutoOn</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -963,7 +975,8 @@
           <tr>
             <td><code>onDuration</code></td>
             <td>The amount of time before the outlet automatically turns itself off (used in conjunction with
-              <code>enableAutoOff</code>).</td>
+              <code>enableAutoOff</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -980,7 +993,8 @@
           <tr>
             <td><code>offDuration</code></td>
             <td>The amount of time before the outlet automatically turns itself on (used in conjunction with
-              <code>enableAutoOn</code>).</td>
+              <code>enableAutoOn</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -1224,7 +1238,8 @@
           <tr>
             <td><code>onDuration</code></td>
             <td>The amount of time before the switch automatically turns itself off (used in conjunction with
-              <code>enableAutoOff</code>).</td>
+              <code>enableAutoOff</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -1241,7 +1256,8 @@
           <tr>
             <td><code>offDuration</code></td>
             <td>The amount of time before the switch automatically turns itself on (used in conjunction with
-              <code>enableAutoOn</code>).</td>
+              <code>enableAutoOn</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
@@ -1448,7 +1464,8 @@
 
       <p>The accessory will determine how long the window-covering should continue opening/closing for based on the
         previous position and target position along with the <code>totalDurationOpen</code> and
-        <code>totalDurationClose</code> values.</p>
+        <code>totalDurationClose</code> values.
+      </p>
 
       <p>The <code>window-covering</code> will first send the <code>open</code>/<code>close</code> hex code, wait for
         the calculated amount of time as explained above, then send the <code>stop</code> hex code. Concurrently, the %
@@ -1623,7 +1640,8 @@
             <td><code>heatTemperature</code></td>
             <td>The temperature at which we change the UI to show that we&#39;re heating. Also used to determine whether
               <code>defaultCoolTemperature</code> or <code>defaultHeatTemperature</code> is used when hex data for a
-              particular temperature is missing.</td>
+              particular temperature is missing.
+            </td>
             <td>20</td>
             <td>22</td>
             <td>No</td>
@@ -1632,7 +1650,8 @@
           <tr>
             <td><code>replaceAutoMode</code></td>
             <td>When we turn on the thermostat with Siri it sets the mode as <code>auto</code>, so we set the mode to
-              <code>cool</code> or <code>heat</code> instead depending on the value of this key.</td>
+              <code>cool</code> or <code>heat</code> instead depending on the value of this key.
+            </td>
             <td>&quot;heat&quot;</td>
             <td>&quot;cool&quot;</td>
             <td>No</td>
@@ -1809,7 +1828,8 @@
         Something to note however is that if you decide to set a new temperature when the accessory has automatically
         turned itself on then it will still attempt to turn itself back off. To stop this automatic turn-off you can
         turn off the accessory manually and then turn it back on manually. Bare in mind that while the Home app may say
-        22C, the temperature may actually be 22.4C and if the Home app says 23C then it may actually be 22.5C.</p>
+        22C, the temperature may actually be 22.4C and if the Home app says 23C then it may actually be 22.5C.
+      </p>
       <h3 id='quot-data-quot-key-value-object-8'>&quot;data&quot; key-value object</h3>
       <table>
         <thead>
@@ -1839,7 +1859,8 @@
           </tr>
         </tbody>
       </table>
-      <h3 id='quot-temperaturex-quot-key-value-object'>&quot;temperatureX&quot; and &quot;modeX&quot; key-value object</h3>
+      <h3 id='quot-temperaturex-quot-key-value-object'>&quot;temperatureX&quot; and &quot;modeX&quot; key-value object
+      </h3>
       <table>
         <thead>
           <tr>
@@ -1989,7 +2010,10 @@
           </tr>
           <tr>
             <td><code>temperatureFilePath</code></td>
-            <td>Path to a local file that Humidity readings can come from. File can contain either a single number (interpretted as Temperature) or lines with values prefixed by <code>temperature:</code>, <code>humidity:</code>, or <code>battery:</code></td>
+            <td>Path to a local file that Humidity readings can come from. File can contain either a single number
+              (interpretted as Temperature) or lines with values prefixed by <code>temperature:</code>,
+              <code>humidity:</code>, or <code>battery:</code>
+            </td>
             <td>/var/tmp/humidity.txt</td>
             <td>-</td>
             <td>No</td>
@@ -1997,7 +2021,9 @@
           </tr>
           <tr>
             <td><code>batteryAlerts</code></td>
-            <td>Sets whether battery levels are monitored (using battery:XX in temperatureFilePath). Adds some HAP Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file or MQTT to include 'battery' field.</td>
+            <td>Sets whether battery levels are monitored (using battery:XX in temperatureFilePath). Adds some HAP
+              Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file
+              or MQTT to include 'battery' field.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -2053,7 +2079,8 @@
           </tr>
           <tr>
             <td><code>humidityFilePath</code></td>
-            <td>Path to a local file that Humidity readings can come from. Needs to be either a single number (used as humidity) or humidity:XX battery:XX</td>
+            <td>Path to a local file that Humidity readings can come from. Needs to be either a single number (used as
+              humidity) or humidity:XX battery:XX</td>
             <td>/var/tmp/humidity.txt</td>
             <td>-</td>
             <td>No</td>
@@ -2061,7 +2088,9 @@
           </tr>
           <tr>
             <td><code>batteryAlerts</code></td>
-            <td>Sets whether battery levels are monitored (using battery:XX in humidityFilePath). Adds some HAP Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file or MQTT to include 'battery' field.</td>
+            <td>Sets whether battery levels are monitored (using battery:XX in humidityFilePath). Adds some HAP
+              Characteristics errors on start-up as Battery Level is not native but supported in Eve app. Requires file
+              or MQTT to include 'battery' field.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -2093,6 +2122,234 @@
           </tr>
         </tbody>
       </table>
+      <h2 id='tv'>TV</h2>
+      <p>Adds TV Accessories.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>default</th>
+            <th>required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>enableAutoOff</code></td>
+            <td>Turn the TV off automatically when onDuration has been reached.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>onDuration</code></td>
+            <td>The amount of time before the TV automatically turns itself off (used in conjunction with
+              enableAutoOff).</td>
+            <td>5</td>
+            <td>60</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>enableAutoOn</code></td>
+            <td>Turn the TV on automatically when offDuration has been reached.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>offDuration</code></td>
+            <td>The amount of time before the TV automatically turns itself on (used in conjunction with enableAutoOff).
+            </td>
+            <td>5</td>
+            <td>60</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>pingIPAddress</code></td>
+            <td>When an IP address is provided, it is pinged every second. If a response is received then the TV turns
+              on, otherwise it turns off.</td>
+            <td>"192.168.1.77"</td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>pingIPAddressStateOnly</code></td>
+            <td>Using this option will prevent the hex code from being sent when the state changes.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>pingFrequency</code></td>
+            <td>The frequency in seconds that the IP address should be pinged.</td>
+            <td>5</td>
+            <td>1</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>pingGrace</code></td>
+            <td>Pauses ping status changes for the specified period (seconds) to allow device to start-up/shutdown after
+              the change.</td>
+            <td>15</td>
+            <td>10</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>subType</code></td>
+            <td>Updates the icon in Home to either TV, STB, Stick, or Receiver.</td>
+            <td>stb</td>
+            <td>tv</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>data</code></td>
+            <td><a href="#quot-data-quot-key-value-object-9">see below</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id='quot-data-quot-key-value-object-9'>&quot;data&quot; key-value object</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>on</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the tv is powered on.
+            </td>
+          </tr>
+          <tr>
+            <td><code>off</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the tv is powered off.
+            </td>
+          </tr>
+          <tr>
+            <td><code>volume</code></td>
+            <td><a href="#quot-data-quot-key-value-object-10">see below</a>.</td>
+          </tr>
+          <tr>
+            <td><code>inputs</code></td>
+            <td><a href="#quot-data-quot-key-value-object-11">see below</a>.</td>
+          </tr>
+          <tr>
+            <td><code>remote</code></td>
+            <td><a href="#quot-data-quot-key-value-object-12">see below</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id='quot-data-quot-key-value-object-10'>&quot;volume&quot; key-value object</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>up</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> to be sent to turn the TV volume up.
+            </td>
+          </tr>
+          <tr>
+            <td><code>down</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> to be sent to turn the TV volume down.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id='quot-data-quot-key-value-object-11'>&quot;inputs&quot; key-value object</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>name</code></td>
+            <td>The name used for the mode, shown in the GUI.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>One of the follow to represent the mode: 'other','home_screen','tuner','hdmi','composite_video','s_video','component_video','dvi','airplay','usb','application'.</td>
+          </tr>
+          <tr>
+            <td><code>data</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> to be sent to switch the TV to the selected input.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id='quot-data-quot-key-value-object-12'>&quot;remote&quot; key-value object</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>rewind</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>fastForward</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>nextTrack</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>previousTrack</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>arrowUp</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>arrowDown</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>arrowLeft</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>arrowRight</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>select</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>back</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>exit</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>playPause</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+          <tr>
+            <td><code>info</code></td>
+            <td>A hex code string or <a href="#hex-object-structure">object</a> for this button function</td>
+          </tr>
+        </tbody>
+      </table>
       <h2 id='learn-code'>learn-code</h2>
       <p>You do not need to add this accessory type yourself as we add one automatically. However if you have multiple
         Broadlink RM devices then it may be useful to specify multiple devices with the <code>learn-code</code> type
@@ -2119,7 +2376,8 @@
           <tr>
             <td><code>onDuration</code></td>
             <td>The amount of time before the switch automatically turns itself off (used in conjunction with
-              <code>enableAutoOff</code>).</td>
+              <code>enableAutoOff</code>).
+            </td>
             <td>5</td>
             <td>60</td>
             <td>No</td>
