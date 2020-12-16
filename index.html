@@ -2057,6 +2057,26 @@
       <p><img src="https://camo.githubusercontent.com/d75d5243a6865e2946fa4266738105ae1af6d3d9e91b34ac66042dc8274ef8f3/68747470733a2f2f6a2e676966732e636f6d2f766c565252302e676966" alt="Home app heater cooler UI in action" data-canonical-src="https://j.gifs.com/vlVRR0.gif" style="max-width:100%;" width="150"></p>
       <p>For more details on how to configure a heater-cooler accessory please review the documentation <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md">here</a> and review <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a> for sample configurations.</p>
       <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Humidifer/Dehumidifer</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"humidifier-dehumidifier"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"targetStateHumidifier"</span><span class="p">:</span><span class="w"></span><span class="s2">"HUMIDIFER_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"targetStateDehumidifier"</span><span class="p">:</span><span class="w"></span><span class="s2">"DEHUMIDIFER_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"SWING_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fanSpeed20"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN20_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fanSpeed60"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN60_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fanSpeed100"</span><span class="p">:</span><span class="w"></span><span class="s2">"FAN100_HEX_CODE"</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Adds a humidifier/dehumidifer accessory.</p>
       <table>
         <thead>
@@ -2083,6 +2103,14 @@
             <td>Sets the device to only run in Humidifer mode</td>
             <td>true</td>
             <td>false</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>showLockPhysicalControls</code></td>
+            <td>Set whether lock options are available</td>
+            <td>false</td>
+            <td>true</td>
             <td>No</td>
             <td>Yes</td>
           </tr>
@@ -2134,13 +2162,55 @@
             <td>No</td>
             <td>Yes</td>
           </tr>
+        </tbody>
+      </table>
+      <h3 id='quot-data-quot-key-value-object-8'>&quot;data&quot; key-value object</h3>
+      <table>
+        <thead>
           <tr>
-            <td><code>data>fanOnly</code></td>
-            <td>Hex code used to disable both Humidifer and Dehumifier functions</td>
-            <td>0020000...</td>
-            <td>off code used if not supplied</td>
-            <td>No</td>
-            <td>Yes</td>
+            <th>key</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>on</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to be sent when the air conditioner is
+              asked to be turned on.</td>
+          </tr>
+          <tr>
+            <td><code>off</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to be sent when the air conditioner is
+              asked to be turned off.</td>
+          </tr>
+          <tr>
+            <td><code>fanOnly</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to disable both Humidifer and Dehumifier functions</td>
+          </tr>
+          <tr>
+            <td><code>targetStateHumidifier</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Humidifier mode</td>
+          </tr>
+          <tr>
+            <td><code>targetStateDehumidifier</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Dehumidifier mode</td>
+          </tr>
+          <tr>
+            <td><code>lockControls</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to lock controls</td>
+          </tr>
+          <tr>
+            <td><code>unlockControls</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to unlock controls</td>
+          </tr>
+          <tr>
+            <td><code>swingToggle</code></td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off.</td>
+          </tr>
+          <tr>
+            <td><code>fanSpeedX</code></td>
+            <td>A hex code string where X is any fanSpeed. Hex code used
+              to set unit to the specified fanSpeed. <code>fanSpeed30</code>.</td>
           </tr>
         </tbody>
       </table>
