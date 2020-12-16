@@ -2046,7 +2046,7 @@
         </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"temperatureCodes"</span><span class="p">:</span><span class="w"></span><span class="p">{</span><span class="w">
           </span><span class="s2">"16"</span><span class="p">:</span><span class="w"></span><span class="s2">"16_HEX_CODE"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"16"</span><span class="p">:</span><span class="w"></span><span class="s2">"24_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"24"</span><span class="p">:</span><span class="w"></span><span class="s2">"24_HEX_CODE"</span><span class="p">,</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="err">...</span><span class="w">
@@ -2145,6 +2145,18 @@
         </tbody>
       </table>
       <h2 id='temperaturesensor'>TemperatureSensor</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Thermometer</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"temperatureSensor"</span><span class="w">
+      </span><span class="s2">"mqttURL"</span><span class="p">:</span><span class="w"></span><span class="s2">"mqtt://localhost"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"mqttTopic"</span><span class="p">:</span><span class="w"></span><span class="s2">"/mi_temp/LivingRoom/temperature"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Adds a Temperature and Humidity Sensor accessory using the Broadlink device's sensors.</p>
       <table>
         <thead>
@@ -2230,6 +2242,16 @@
         </tbody>
       </table>
       <h2 id='humiditysensor'>Humidity Sensor</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Humidity Sensor</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"humiditySensor"</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Adds a humidity sensor using the Broadlink device's sensors.</p>
       <table>
         <thead>
@@ -2297,8 +2319,38 @@
         </tbody>
       </table>
       <h2 id='tv'>TV</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example TV</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"tv"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"on"</span><span class="p">:</span><span class="w"></span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"remote"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"select"</span><span class="p">:</span><span class="w"></span><span class="s2">"SELECT_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"arrowUp"</span><span class="p">:</span><span class="w"></span><span class="s2">"UP_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"arrowDown"</span><span class="p">:</span><span class="w"></span><span class="s2">"DOWN_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"arrowLeft"</span><span class="p">:</span><span class="w"></span><span class="s2">"LEFT_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"arrowRight"</span><span class="p">:</span><span class="w"></span><span class="s2">"RIGHT_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"playPause"</span><span class="p">:</span><span class="w"></span><span class="s2">"PAUSE_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"volume"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"up"</span><span class="p">:</span><span class="w"></span><span class="s2">"VOLUP_HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"down"</span><span class="p">:</span><span class="w"></span><span class="s2">"VOLDOWN_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"inputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"></span><span class="s2">"INPUT 1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"></span><span class="s2">"hdmi"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Adds TV Accessories.</p>
-
       <table>
         <thead>
           <tr>
