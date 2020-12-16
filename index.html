@@ -834,8 +834,6 @@
       </table>
       <h1 id='accessories'>Accessories</h1>
       <h2 id='switch'>switch</h2>
-      <p>Turn the switch on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is
-        sent.</p>
         <blockquote>
           <p>Example</p>
         </blockquote>
@@ -850,6 +848,8 @@
         </span><span class="err">...</span><span class="w">
       </span><span class="p">}</span><span class="w">
       </span></code></pre>
+      <p>Turn the switch on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is
+        sent.</p>
       <table>
         <thead>
           <tr>
@@ -966,6 +966,20 @@
         </tbody>
       </table>
       <h2 id='outlet'>outlet</h2>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Outlet"</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"outlet"</span><span class="w">
+      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>Turn the outlet on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is
         sent.</p>
 
