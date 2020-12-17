@@ -1947,23 +1947,67 @@
         </tbody>
       </table>
       <h3 id='mqtt-temperature-support'>mqtt temperature support</h3>
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="s2">"mqttURL"</span><span class="p">:</span><span class="w"> </span><span class="p">"mqtt://192.168.1.77"</span><span class="w">
+      </span><span class="s2">"mqttTopic"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"></span><span class="s2">"temperature"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"topic"</span><span class="p">:</span><span class="w"></span><span class="s2">"/myhome/groundfloor/livingroom/temperature"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+          </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"></span><span class="s2">"humidity"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"topic"</span><span class="p">:</span><span class="w"></span><span class="s2">"/myhome/groundfloor/livingroom/humidity"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+          </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"></span><span class="s2">"battery"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"topic"</span><span class="p">:</span><span class="w"></span><span class="s2">"/myhome/groundfloor/livingroom/battery"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span></code></pre>
       <p>You may subscribe to an mqtt topic to receive temperaturee updates. To do so you must specify the following
         configuration options:</p>
 
-      <ul>
-        <li><code>mqttURL</code></li>
-        <li><code>mqttTopic</code></li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>required</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>mqttURL</code></td>
+              <td>The URL where the mqtt feed is. This must be prefixed with <code>mqtt://</code></td>
+              <td>mqtt://192.168.1.77</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <td><code>mqttTopic</code></td>
+              <td>The topic where the applicable value can be found. This can be a single string to retreive a single value, 
+                or an object to recieve multiple values. When using multiple values, valid identifiers are <code>temperature</code>, 
+                <code>humidity</code>, and <code>battery</code>.</td>
+              <td>/myhome/groundfloor/livingroom/temperature</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <td><code>mqttUsername</code></td>
+              <td>The username to access the mqtt feed.</td>
+              <td>mqttuser</td>
+              <td>no (But Recommended)</td>
+            </tr>
+            <tr>
+              <td><code>mqttPassword</code></td>
+              <td>The password to go with the supplied <code>mqttUsername</code></td>
+              <td>hunter2</td>
+              <td>no (But Recommended)</td>
+            </tr>
+            </tbody>
+            </table>
 
-      <p>It&#39;s also recommended that you use authentication by specifying these additional configuration options:</p>
-
-      <ul>
-        <li><code>mqttUsername</code></li>
-        <li><code>mqttPassword</code></li>
-      </ul>
-
-      <p>The value set on the topic is expected to be a string value. e.g. &quot;24&quot; or an object that includes a
-        key of &quot;temperature&quot;, &quot;Temperature&quot;, &quot;Temp&quot; or &quot;temp&quot;.</p>
       <h3 id='air-conditioner-notes'>air-conditioner Notes</h3>
       <p>There looks to be a glitch in the Apple Home app in that nothing happens when setting the mode to Off when
         you&#39;ve turned the thermostat on by setting a specific temperature. Siri and other HomeKit apps don&#39;t
@@ -2039,7 +2083,7 @@
       </blockquote>
       <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
       </span><span class="err">...</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Heater Cooler</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Heater Cooler"</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"heater-cooler"</span><span class="w">
       </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"on"</span><span class="p">:</span><span class="w"></span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
@@ -2148,7 +2192,7 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a>.</td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
@@ -2156,7 +2200,7 @@
           </tr>
           <tr>
             <td><code>mqttTopic</code></td>
-            <td>The mqtt topic for humidity data</td>
+            <td>The mqtt topic for humidity data. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
             <td>-</td>
             <td>No</td>
@@ -2291,7 +2335,7 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
@@ -2299,7 +2343,7 @@
           </tr>
           <tr>
             <td><code>mqttTopic</code></td>
-            <td>HThe mqtt topic for humidity data</td>
+            <td>The mqtt topic for humidity data. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
             <td>-</td>
             <td>No</td>
@@ -2368,7 +2412,7 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://</td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with <code>mqtt://</code>. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
@@ -2376,7 +2420,7 @@
           </tr>
           <tr>
             <td><code>mqttTopic</code></td>
-            <td>HThe mqtt topic for humidity data</td>
+            <td>The mqtt topic for humidity data. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
             <td>-</td>
             <td>No</td>
