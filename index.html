@@ -2036,6 +2036,46 @@
       </span><span class="err">...</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span></code></pre>
+    <blockquote>
+      <p>Complex Example</p>
+    </blockquote>
+    <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Heater Cooler",</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"heater-cooler",</span><span class="w">
+    </span><span class="s2">"minTemperature"</span><span class="p">:</span><span class="w"> </span><span class="p">67,</span><span class="w">
+    </span><span class="s2">"maxTemperature"</span><span class="p">:</span><span class="w"> </span><span class="p">80,</span><span class="w">
+    </span><span class="s2">"heatingThresholdTemperature"</span><span class="p">:</span><span class="w"> </span><span class="p">68,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"on"</span><span class="p">:</span><span class="w"></span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"off"</span><span class="p">:</span><span class="w"></span><span class="s2">"OFF_HEX_CODE"</span><span class="w">
+      </span><span class="s2">"temperatureCodes"</span><span class="p">:</span><span class="w"></span><span class="p">{</span><span class="w">
+        </span><span class="s2">"67"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"rotationSpeedX"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"swingDnd"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="p">},</span><span class="w"> 
+          </span><span class="s2">"rotationSpeedY"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"swingDnd"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="p">}</span><span class="w"> 
+        </span><span class="p">},</span><span class="w"> 
+        </span><span class="s2">"68"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"rotationSpeedX"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"swingDnd"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w"> 
+        </span><span class="s2">"rotationSpeedY"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"swingDnd"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"swingToggle"</span><span class="p">:</span><span class="w"></span><span class="s2">"HEX_CODE"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w"> 
+      </span><span class="p">}</span><span class="w"> 
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span></code></pre>
       <p>Implementation of heater cooler accessory specification as per Apple HAP. Heater cooler allows for better
         representation of standalone heaters and air-conditioners that support functions like oscillation and fan speed.
       </p>
