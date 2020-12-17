@@ -420,6 +420,9 @@
           <li>
             <a href="#device-detection-permissions" class="toc-h2 toc-link" data-title="device-detection-permissions">Device Failure Detection Permissions</a>
           </li>
+          <li>
+            <a href="#4.3.1notes" class="toc-h2 toc-link" data-title="4.3.1notes">Version 4.3.1+ notes</a>
+          </li>
         </ul>
       </li>
       <li>
@@ -479,23 +482,6 @@
             alt="Lock setting in the Broadlink app" style="max-width:100%;" width="150">
         </li>
       </ul>
-
-      <h2 id='4.3.1notes'>Version 4.3.1+ notes</h2>
-      <p>There are a couple of changes made in version 4.3.1 which might cause issues when you upgrade.<br /></p>
-      <ul>
-        <li>There was a bug in how MAC addresses were stored in the plugin. If you specify a HOST in your config.json by
-          MAC address, you'll likely need to correct this value after you update.</li>
-        <li>In order to fix an issue in iOS 14, all TVs are now seperate accessories. Previously the first TV connected
-          via Homebridge as a bridge. This means that after updating, that first TV will need to be removed and re-added
-          to HomeKit.</li>
-        <li>The Dehumidifer accessory has been updated to use the Humidity readings from your Broadlink device. If your
-          Broadlink device doesn't support Humidity readings, or you don't want to functionality set `"noHumidity" :
-          true` in your config.json</li>
-      </ul>
-
-      <p>For other changes, refer to the Change Log <a
-          href='https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/CHANGELOG.md' target='_blank'>here</a>.
-      </p>
       <h1 id='installation'>Installation</h1>
       <blockquote>
         <p>Example BroadlinkRM platform in the homebridge configuration:</p>
@@ -2938,6 +2924,18 @@
         regular (non-symlink) file</code> run <code>ls -al /path/to/node</code> and the result will give you the actual location of node.
         Repeat step 2 above using this new value.
       </p>
+      <h2 id='4.3.1notes'>Version 4.3.1+ notes</h2>
+      <p>There are a couple of changes made in version 4.3.1 which might cause issues when you upgrade.<br /></p>
+      <ul>
+        <li>There was a bug in how MAC addresses were stored in the plugin. If you specify a HOST in your config.json by
+          MAC address, you'll likely need to correct this value after you update.</li>
+        <li>In order to fix an issue in iOS 14, all TVs are now seperate accessories. Previously the first TV connected
+          via Homebridge as a bridge. This means that after updating, that first TV will need to be removed and re-added
+          to HomeKit.</li>
+        <li>The Dehumidifer accessory has been updated to use the Humidity readings from your Broadlink device. If your
+          Broadlink device doesn't support Humidity readings, or you don't want to functionality set `"noHumidity" :
+          true` in your config.json</li>
+      </ul>
       <h1 id='special-thanks'>Special Thanks</h1>
       <p>Thanks to <a href="https://github.com/tattn/homebridge-rm-mini3" target='_blank'>@tattn</a>, <a
           href="https://github.com/PJCzx/homebridge-thermostat" target='_blank'>@PJCzx</a> and <a
