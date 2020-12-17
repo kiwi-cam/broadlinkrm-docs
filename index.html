@@ -523,8 +523,30 @@
       <aside class="success">When you run homebridge, your Broadlink RM device will automatically discovered.</aside>
       <h1 id='advanced-setup'>Advanced Setup</h1>
       <h2 id='homebridge-config-location'>Homebridge Config Location</h2>
+      <p>The plugin uses ping to detect if a device drops off the network. Recent changes to the ping module require
+        additional
+        node permissions. If this is an issue you'll see a message like this in the logs on start up:
+      </p>
+      <p><code>[Broadlink RM] Broadlink RM won't detect device failures due to a permissions issues with "net-ping".<br />
+        To fix:<br />
+        1. Run "which node" to determine your node path.<br />
+        2. Run "sudo setcap cap_net_raw+ep /path/to/node".<br />
+        Note: Replacing /path/to/node with the path you found in the first step.
+      </code></p>
+      <p>To fix this, follow the steps as outlined:</p>
+      <p>
+      <ol>
+        <li>Run <code>which node</code> and note the result.</li>
+        <li>Run <code>sudo setcap cap_net_raw+ep /path/to/node</code> replacing /path/to/node with the path noted above.</li>
+      </ol>
+      If this fails with an error <code>The value of the capability argument is not permitted for a file. Or the file is not a 
+        regular (non-symlink) file</code> run <code>ls -al /path/to/node</code> and the result will give you the actual location of node.
+        Repeat step 2 above using this new value.
+      </p>
+      <h2 id='device-detection-permissions'>Device Failure Detection Permissions</h2>
       <p>Generally the plugin can find where your <code>config.json</code> lives as it commonly sits in the
-        <code>/var/lib/homebridge</code> directory, or the <code>.homebridge</code> directory of your user account. If you&#39;re 
+        <code>/var/lib/homebridge</code> directory, or the <code>.homebridge</code> directory of your user account. If
+        you&#39;re
         doing something out of the ordinary however you may need to override this. You can do so by adding a
         <code>&quot;homebridgeDirectory&quot;: &quot;/path/to/config.json</code> key/value pair to the platform config.
       </p>
@@ -2035,10 +2057,10 @@
       </span><span class="err">...</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span></code></pre>
-    <blockquote>
-      <p>Complex Example</p>
-    </blockquote>
-    <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      <blockquote>
+        <p>Complex Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="err">...</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Heater Cooler",</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"heater-cooler",</span><span class="w">
@@ -2247,14 +2269,15 @@
         <li>This accessory supports combined hex codes for temperature, fan speed and rotation. Please check the
           config-sample.json file for more details and examples.</li>
         <li>Swing operation can be supported by providing <code>swingOn</code> and <code>swingOff</code> OR
-          <code>swingToggle</code> and <code>swingDnd</code>.</li>
+          <code>swingToggle</code> and <code>swingDnd</code>.
+        </li>
       </ul>
       <p>For more details on how to configure a heater-cooler accessory please review the documentation <a
-        href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md">here</a> and
-      review <a
-        href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a>
-      for sample configurations.</p>
-      
+          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md">here</a> and
+        review <a
+          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a>
+        for sample configurations.</p>
+
       <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
       <blockquote>
         <p>Example</p>
