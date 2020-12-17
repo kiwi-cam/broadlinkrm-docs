@@ -523,6 +523,13 @@
       <aside class="success">When you run homebridge, your Broadlink RM device will automatically discovered.</aside>
       <h1 id='advanced-setup'>Advanced Setup</h1>
       <h2 id='homebridge-config-location'>Homebridge Config Location</h2>
+      <p>Generally the plugin can find where your <code>config.json</code> lives as it commonly sits in the
+        <code>/var/lib/homebridge</code> directory, or the <code>.homebridge</code> directory of your user account. If
+        you&#39;re
+        doing something out of the ordinary however you may need to override this. You can do so by adding a
+        <code>&quot;homebridgeDirectory&quot;: &quot;/path/to/config.json</code> key/value pair to the platform config.
+      </p>
+      <h2 id='device-detection-permissions'>Device Failure Detection Permissions</h2>
       <p>The plugin uses ping to detect if a device drops off the network. Recent changes to the ping module require
         additional
         node permissions. If this is an issue you'll see a message like this in the logs on start up:
@@ -539,16 +546,11 @@
         <li>Run <code>which node</code> and note the result.</li>
         <li>Run <code>sudo setcap cap_net_raw+ep /path/to/node</code> replacing /path/to/node with the path noted above.</li>
       </ol>
+      </p>
+      <p>
       If this fails with an error <code>The value of the capability argument is not permitted for a file. Or the file is not a 
         regular (non-symlink) file</code> run <code>ls -al /path/to/node</code> and the result will give you the actual location of node.
         Repeat step 2 above using this new value.
-      </p>
-      <h2 id='device-detection-permissions'>Device Failure Detection Permissions</h2>
-      <p>Generally the plugin can find where your <code>config.json</code> lives as it commonly sits in the
-        <code>/var/lib/homebridge</code> directory, or the <code>.homebridge</code> directory of your user account. If
-        you&#39;re
-        doing something out of the ordinary however you may need to override this. You can do so by adding a
-        <code>&quot;homebridgeDirectory&quot;: &quot;/path/to/config.json</code> key/value pair to the platform config.
       </p>
       <h2 id='multiple-broadlink-rm-devices'>Multiple Broadlink RM Devices</h2>
       <p>If you have multiple Broadlink RM devices (e.g. one in the bedroom, one in the lounge) then you can
