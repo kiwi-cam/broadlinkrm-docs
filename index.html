@@ -453,6 +453,20 @@
         <li>There&#39;s a lot of people here who have never seen config files like these before, so here&#39;s a quick
           tip; when you have the option of putting true or false as a value, do not put quotation marks around it. e.g.
           { example: false } not { example: &quot;false&quot; }.</li>
+        <li>Broadlink will now, by default, lock your device when it is configured so that it cannot be reached by local devices.
+          This will prevent this plug-in from discovering or connecting to the device. To unlock either abort the setup process 
+          when you're prompted for a room, or follow these steps:
+          <ol>
+            <li>Open the Broadlink app</li>
+            <li>From the Home screen, tap on your Broadlink device</li>
+            <li>Tap the ... in the top right</li>
+            <li>Scroll down and toggle "Lock device" to Off</li>
+            <li>Tap OK when prompted "Confirm to unlock the device"</li>
+          </ol>
+          <img
+          src="https://camo.githubusercontent.com/c1db2ce71ce10a6260d7b1ba67d5dafd1175f2a73b877baf751246be025873c2/68747470733a2f2f692e696d6775722e636f6d2f444d545562446f2e706e67"
+          alt="Lock setting in the Broadlink app" style="max-width:100%;" width="150">
+        </li>
       </ul>
 
       <h2 id='4.3.1notes'>Version 4.3.1+ notes</h2>
