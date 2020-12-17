@@ -418,7 +418,8 @@
             <a href="#config-parsing" class="toc-h2 toc-link" data-title="config-parsing">Config File Parsing</a>
           </li>
           <li>
-            <a href="#device-detection-permissions" class="toc-h2 toc-link" data-title="device-detection-permissions">Device Failure Detection Permissions</a>
+            <a href="#device-detection-permissions" class="toc-h2 toc-link"
+              data-title="device-detection-permissions">Device Failure Detection Permissions</a>
           </li>
           <li>
             <a href="#431notes" class="toc-h2 toc-link" data-title="431notes">Version 4.3.1+ notes</a>
@@ -506,17 +507,22 @@
   </span><span class="err">...</span><span class="w">
 </span></code></pre>
       <ol>
-        <li>Install homebridge using the <a href="https://github.com/nfarina/homebridge" target='_blank'>directions on the project
+        <li>Install homebridge using the <a href="https://github.com/nfarina/homebridge" target='_blank'>directions on
+            the project
             page</a></li>
         <li>Install this plugin using: <code>npm install -g homebridge-broadlink-rm-pro</code></li>
         <li>Update your homebridge <code>config.json</code> file. See <a
-            href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json" target='_blank'>config-sample.json</a>
+            href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json"
+            target='_blank'>config-sample.json</a>
           for examples.</li>
       </ol>
       <aside class="success">When you run homebridge, your Broadlink RM device will automatically discovered.</aside>
-      <p>If you have trouble, check out the <a href='#troubleshooing'>Troubleshooting</a> section below. If you're still having trouble 
-        reach out the the community for help. I recommend either <a href='https://www.reddit.com/r/homebridge/' target='_blank'>Reddit</a> or 
-        <a href='https://github.com/kiwi-cam/homebridge-broadlink-rm/issues' target='_blank'>GitHub</a> are usually the best places.
+      <p>If you have trouble, check out the <a href='#troubleshooting'>Troubleshooting</a> section below. If you're still
+        having trouble
+        reach out the the community for help. I recommend either <a href='https://www.reddit.com/r/homebridge/'
+          target='_blank'>Reddit</a> or
+        <a href='https://github.com/kiwi-cam/homebridge-broadlink-rm/issues' target='_blank'>GitHub</a> are usually the
+        best places.
       </p>
       <h1 id='advanced-setup'>Advanced Setup</h1>
       <h2 id='multiple-broadlink-rm-devices'>Multiple Broadlink RM Devices</h2>
@@ -2242,9 +2248,10 @@
         </li>
       </ul>
       <p>For more details on how to configure a heater-cooler accessory please review the documentation <a
-          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md" target='_blank'>here</a> and
-        review <a
-          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json" target='_blank'>config-sample.json</a>
+          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md"
+          target='_blank'>here</a> and
+        review <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json"
+          target='_blank'>config-sample.json</a>
         for sample configurations.</p>
 
       <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
@@ -2894,8 +2901,9 @@
       </p>
       <h2 id='config-parsing'>Config File Parsing</h2>
       <p>You&#39;ll likely encounter an error at some point saying <code>There was a problem reading your config.json file. 
-        Please try pasting your config.json file here to validate it: http://jsonlint.com</code>. The site 
-        <a href='http://jsonlint.com' target='_blank'>http://jsonlint.com</a> is a great resource. Take the advice and copy/paste your config 
+        Please try pasting your config.json file here to validate it: http://jsonlint.com</code>. The site
+        <a href='http://jsonlint.com' target='_blank'>http://jsonlint.com</a> is a great resource. Take the advice and
+        copy/paste your config
         there and it&#39;ll help you locate where you&#39;ve gone wrong.
       </p>
       <p>There are a lot of people here who have never seen config files like these before, so here&#39;s a quick
@@ -2916,12 +2924,14 @@
       <p>
       <ol>
         <li>Run <code>which node</code> and note the result.</li>
-        <li>Run <code>sudo setcap cap_net_raw+ep /path/to/node</code> replacing /path/to/node with the path noted above.</li>
+        <li>Run <code>sudo setcap cap_net_raw+ep /path/to/node</code> replacing /path/to/node with the path noted above.
+        </li>
       </ol>
       </p>
       <p>
-      If this fails with an error <code>The value of the capability argument is not permitted for a file. Or the file is not a 
-        regular (non-symlink) file</code> run <code>ls -al /path/to/node</code> and the result will give you the actual location of node.
+        If this fails with an error <code>The value of the capability argument is not permitted for a file. Or the file is not a 
+        regular (non-symlink) file</code> run <code>ls -al /path/to/node</code> and the result will give you the actual
+        location of node.
         Repeat step 2 above using this new value.
       </p>
       <h2 id='431notes'>Version 4.3.1+ notes</h2>
@@ -2941,7 +2951,8 @@
           href="https://github.com/PJCzx/homebridge-thermostat" target='_blank'>@PJCzx</a> and <a
           href="https://github.com/momodalo/broadlinkjs" target='_blank'>@momodalo</a> whose time and effort got <a
           href="https://github.com/lprhodes/homebridge-broadlink-rm" target='_blank'>@lprhodes</a> started.</p>
-      <p>And of course, thanks to <a href="https://github.com/lprhodes/homebridge-broadlink-rm" target='_blank'>@lprhodes</a> for
+      <p>And of course, thanks to <a href="https://github.com/lprhodes/homebridge-broadlink-rm"
+          target='_blank'>@lprhodes</a> for
         making
         the project exist.</p>
     </div>
