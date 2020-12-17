@@ -433,16 +433,16 @@
         drink using <a href="https://paypal.me/kiwicamRM">Paypal</a>.</p>
 
       <p>Why the name? - Obviously homebridge-broadlink-rm comes from the first plugin which <a
-        href="https://github.com/lprhodes/homebridge-broadlink-rm">@lprhodes</a> created. Soon after that a fork added the 
-        &quot;air-conditioner-pro&quot; accessory allowing different hex codes for each AC function, but support dropped - and 
-        I can't find a source now. This fork started by merging the &quot;air-conditioner-pro&quot; features into the 
-        original plugin. Since then we've also added &quot;tv&quot; support thanks to 
-        <a href="https://github.com/AlexanderBabel">@AlexanderBabel</a>, then more recently updated to 
-      add support for the newer RM4 devices.</p>
-
-      <p>Working on open source projects like this is full-time for me so every bit helps.</p>
-
-      <p>Thank you, sincerely!</p>
+          href="https://github.com/lprhodes/homebridge-broadlink-rm">@lprhodes</a> created. Soon after that a fork added
+        the
+        &quot;air-conditioner-pro&quot; accessory allowing different hex codes for each AC function, but support dropped
+        - and
+        I can't find a source now. This fork started by merging the &quot;air-conditioner-pro&quot; features into the
+        original plugin. Since then we've also added &quot;tv&quot; support thanks to
+        <a href="https://github.com/AlexanderBabel">@AlexanderBabel</a>, then more recently updated to
+        add support for the newer RM4 devices.
+      </p>
+      <p>Thank you to all those that make contributions to the Homebridge community!</p>
       <h1 id='requirements'>Requirements</h1>
       <ul>
         <li>Requires Node.js &gt;= 7.6.0</li>
@@ -498,7 +498,9 @@
         <li>Install homebridge using the <a href="https://github.com/nfarina/homebridge">directions on the project
             page</a></li>
         <li>Install this plugin using: <code>npm install -g homebridge-broadlink-rm-pro</code></li>
-        <li>Update your homebridge <code>config.json</code> file. See <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a> for examples.</li>
+        <li>Update your homebridge <code>config.json</code> file. See <a
+            href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a>
+          for examples.</li>
       </ol>
 
       <aside class="success">When you run homebridge, your Broadlink RM device will automatically discovered.</aside>
@@ -834,10 +836,10 @@
       </table>
       <h1 id='accessories'>Accessories</h1>
       <h2 id='switch'>switch</h2>
-        <blockquote>
-          <p>Example</p>
-        </blockquote>
-        <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+      <blockquote>
+        <p>Example</p>
+      </blockquote>
+      <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
         </span><span class="err">...</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">"Example Switch",</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">"switch",</span><span class="w">
@@ -1128,7 +1130,8 @@
         to the one requested. e.g. If you only specify fan speeds of 10%, 50% and 100% then ask &quot;Set Fan to
         40%&quot; then the hex code for 50% will be used.</p>
 
-      <p>There is also a type &quot;fanv1&quot; which is the older HomeKit fan. This type doesn&#39;t support <code>swingMode</code> but HomeKit gives more icon options.</p>
+      <p>There is also a type &quot;fanv1&quot; which is the older HomeKit fan. This type doesn&#39;t support
+        <code>swingMode</code> but HomeKit gives more icon options.</p>
 
       <table>
         <thead>
@@ -1226,7 +1229,8 @@
           </tr>
           <tr>
             <td><code>swingToggle</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off. Not supported when using <code>&quot;type&quot;: &quot;fanv1&quot;</code>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off.
+              Not supported when using <code>&quot;type&quot;: &quot;fanv1&quot;</code>
             </td>
           </tr>
           <tr>
@@ -1492,7 +1496,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id='lock'>lock</h2>      
+      <h2 id='lock'>lock</h2>
       <blockquote>
         <p>Example</p>
       </blockquote>
@@ -1978,36 +1982,39 @@
             <th>example</th>
             <th>required</th>
           </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>mqttURL</code></td>
-              <td>The URL where the mqtt feed is. This must be prefixed with <code>mqtt://</code></td>
-              <td>mqtt://192.168.1.77</td>
-              <td>yes</td>
-            </tr>
-            <tr>
-              <td><code>mqttTopic</code></td>
-              <td>The topic where the applicable value can be found. This can be a single string to retreive a single value, 
-                or an object to recieve multiple values. When using multiple values, valid identifiers are <code>temperature</code>, 
-                <code>humidity</code>, and <code>battery</code>.</td>
-              <td>/myhome/groundfloor/livingroom/temperature</td>
-              <td>yes</td>
-            </tr>
-            <tr>
-              <td><code>mqttUsername</code></td>
-              <td>The username to access the mqtt feed.</td>
-              <td>mqttuser</td>
-              <td>no (But Recommended)</td>
-            </tr>
-            <tr>
-              <td><code>mqttPassword</code></td>
-              <td>The password to go with the supplied <code>mqttUsername</code></td>
-              <td>hunter2</td>
-              <td>no (But Recommended)</td>
-            </tr>
-            </tbody>
-            </table>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>mqttURL</code></td>
+            <td>The URL where the mqtt feed is. This must be prefixed with <code>mqtt://</code></td>
+            <td>mqtt://192.168.1.77</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttTopic</code></td>
+            <td>The topic where the applicable value can be found. This can be a single string to retreive a single
+              value,
+              or an object to recieve multiple values. When using multiple values, valid identifiers are
+              <code>temperature</code>,
+              <code>humidity</code>, and <code>battery</code>.
+            </td>
+            <td>/myhome/groundfloor/livingroom/temperature</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td><code>mqttUsername</code></td>
+            <td>The username to access the mqtt feed.</td>
+            <td>mqttuser</td>
+            <td>no (But Recommended)</td>
+          </tr>
+          <tr>
+            <td><code>mqttPassword</code></td>
+            <td>The password to go with the supplied <code>mqttUsername</code></td>
+            <td>hunter2</td>
+            <td>no (But Recommended)</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h3 id='air-conditioner-notes'>air-conditioner Notes</h3>
       <p>There looks to be a glitch in the Apple Home app in that nothing happens when setting the mode to Off when
@@ -2098,10 +2105,20 @@
       </span><span class="err">...</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span></code></pre>
-      <p>Implementation of heater cooler accessory specification as per Apple HAP. Heater cooler allows for better representation of standalone heaters and air-conditioners that support functions like oscillation and fan speed.</p>
-      <p>In addition to the fan speed and oscillation features, this accessory also supports temperature in both degree Celsius and Fahrenheit.</p>
-      <p><img src="https://camo.githubusercontent.com/d75d5243a6865e2946fa4266738105ae1af6d3d9e91b34ac66042dc8274ef8f3/68747470733a2f2f6a2e676966732e636f6d2f766c565252302e676966" alt="Home app heater cooler UI in action" data-canonical-src="https://j.gifs.com/vlVRR0.gif" style="max-width:100%;" width="150"></p>
-      <p>For more details on how to configure a heater-cooler accessory please review the documentation <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md">here</a> and review <a href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a> for sample configurations.</p>
+      <p>Implementation of heater cooler accessory specification as per Apple HAP. Heater cooler allows for better
+        representation of standalone heaters and air-conditioners that support functions like oscillation and fan speed.
+      </p>
+      <p>In addition to the fan speed and oscillation features, this accessory also supports temperature in both degree
+        Celsius and Fahrenheit.</p>
+      <p><img
+          src="https://camo.githubusercontent.com/d75d5243a6865e2946fa4266738105ae1af6d3d9e91b34ac66042dc8274ef8f3/68747470733a2f2f6a2e676966732e636f6d2f766c565252302e676966"
+          alt="Home app heater cooler UI in action" data-canonical-src="https://j.gifs.com/vlVRR0.gif"
+          style="max-width:100%;" width="150"></p>
+      <p>For more details on how to configure a heater-cooler accessory please review the documentation <a
+          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/docs/heater-cooler.md">here</a> and
+        review <a
+          href="https://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/config-sample.json">config-sample.json</a>
+        for sample configurations.</p>
       <h2 id='humidifier-dehumidifier'>humidifier-dehumidifier</h2>
       <blockquote>
         <p>Example</p>
@@ -2194,7 +2211,8 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a>.</td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a
+                href="#mqtt-temperature-support">MQTT notes above</a>.</td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
@@ -2235,15 +2253,18 @@
           </tr>
           <tr>
             <td><code>fanOnly</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to disable both Humidifer and Dehumifier functions</td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to disable both Humidifer and
+              Dehumifier functions</td>
           </tr>
           <tr>
             <td><code>targetStateHumidifier</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Humidifier mode</td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Humidifier mode
+            </td>
           </tr>
           <tr>
             <td><code>targetStateDehumidifier</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Dehumidifier mode</td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> to set the unit to Dehumidifier mode
+            </td>
           </tr>
           <tr>
             <td><code>lockControls</code></td>
@@ -2255,7 +2276,8 @@
           </tr>
           <tr>
             <td><code>swingToggle</code></td>
-            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off.</td>
+            <td>A hex code string or <a href="#advanced-hex-structure">object</a> used to toggle the swing mode on/off.
+            </td>
           </tr>
           <tr>
             <td><code>fanSpeedX</code></td>
@@ -2337,7 +2359,8 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a
+                href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
@@ -2414,7 +2437,8 @@
           </tr>
           <tr>
             <td><code>mqttURL</code></td>
-            <td>The URL to monitor for MQTT topics (below). Must be prefixed with <code>mqtt://</code>. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with <code>mqtt://</code>. Refer to <a
+                href="#mqtt-temperature-support">MQTT notes above</a></td>
             <td>mqtt://localhost</td>
             <td>-</td>
             <td>No</td>
