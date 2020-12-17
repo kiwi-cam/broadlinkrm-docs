@@ -413,6 +413,18 @@
       </li>
       <li>
         <a href="#troubleshooting" class="toc-h1 toc-link" data-title="troubleshooting">Troubleshooting</a>
+        <ul class="toc-list-h2">
+          <li>
+            <a href="#homebridge-config-location" class="toc-h2 toc-link"
+              data-title="homebridge-config-location">Homebridge Config Location</a>
+          </li>
+          <li>
+            <a href="#config-parsing" class="toc-h2 toc-link" data-title="config-parsing">Config File Parsing</a>
+          </li>
+          <li>
+            <a href="#device-detection-permissions" class="toc-h2 toc-link" data-title="device-detection-permissions">Device Failure Detection Permissions</a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#special-thanks" class="toc-h1 toc-link" data-title="special-thanks">Special Thanks</a>
@@ -454,9 +466,6 @@
           <code>ERROR LOADING PLUGIN&quot;...&quot;async setCharacteristicValue (props, value, callback) {</code> then
           please check your node version before creating a new issue: <code>node -v</code>.
         </li>
-        <li>There&#39;s a lot of people here who have never seen config files like these before, so here&#39;s a quick
-          tip; when you have the option of putting true or false as a value, do not put quotation marks around it. e.g.
-          { example: false } not { example: &quot;false&quot; }.</li>
         <li>Broadlink will now, by default, lock your device when it is configured so that it cannot be reached by local
           devices.
           This will prevent this plug-in from discovering or connecting to the device. To unlock either abort the setup
@@ -2898,6 +2907,15 @@
         doing something out of the ordinary however you may need to override this. You can do so by adding a
         <code>&quot;homebridgeDirectory&quot;: &quot;/path/to/config.json</code> key/value pair to the platform config.
       </p>
+      <h2 id='config-parsing'>Config File Parsing</h2>
+      <p>You&#39;ll likely encounter and error at some point saying <code>There was a problem reading your config.json file. 
+        Please try pasting your config.json file here to validate it: http://jsonlint.com</code>. The site 
+        <a href='http://jsonlint.com'>http://jsonlint.com</a> is a great resource. Take the advice and cope/paste your config 
+        there and it&#39;ll help locate where you've gone wrong.
+      </p>
+      <p>There are a lot of people here who have never seen config files like these before, so here&#39;s a quick
+        tip; when you have the option of putting true or false as a value, do not put quotation marks around it. e.g.
+        { example: false } not { example: &quot;false&quot; }.</p>
       <h2 id='device-detection-permissions'>Device Failure Detection Permissions</h2>
       <p>The plugin uses ping to detect if a device drops off the network. Recent changes to the ping module require
         additional
