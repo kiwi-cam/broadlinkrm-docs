@@ -951,9 +951,16 @@
             <td>10</td>
             <td>No</td>
           </tr>
+          <tr>
+            <td><code>stateless</code> <b>[In BETA]</b></td>
+            <td>If true, the switch will always revert to an "Off" state.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
         </tbody>
       </table>
-      <h3 id='quot-data-quot-key-value-object'>&quot;data&quot; key-value object</h3>
+      <h3 id='quot-data-quot-key-value-object'>&quot;data&quot; k/ey-value object</h3>
       <table>
         <thead>
           <tr>
@@ -2007,6 +2014,10 @@
             <td><code>modeX</code></td>
             <td>A hex code string where X is any temperture, and mode is one of "heat","cool", or "auto". Hex code used
               to set unit to the specified mode and temperature. <code>heat30</code>. See below.</td>
+          </tr>
+          <tr>
+            <td><code>offDryMode</code><b>[In BETA]</b></td>
+            <td>A hex code string used to enable the Coil Dry feature on some AC units when turning the unit off.</td>
           </tr>
         </tbody>
       </table>
