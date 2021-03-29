@@ -1906,7 +1906,7 @@
           </tr>
           <tr>
             <td><code>noHistory</code> <b>In BETA</b></td>
-            <td>Removes the Eve temperature and humidity history service from this accessory.</td>
+            <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes</a>.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -1977,7 +1977,18 @@
           </tr>
         </tbody>
       </table>
-
+      <h3 id='EveHistory-notes'>Eve History Notes</h3>
+      <b>In BETA</b>
+      <p>
+        Air-Conditioner, and other temperature and humidity sensors support Eve History through the module 
+        <a href='https://github.com/simont77/fakegato-history'>fakegato-history</a>. Through the Eve Home app you should
+        be able to see history of these readings.  The module will take average readings over 10 minute periods so don't be 
+        alarmed if there's no data as soon as Homebridge starts - this is normal.
+      </p>
+      <p>
+        The module will also store its reading in your homebridge dir as '<i>RMPro_Accessory-Name_persist.json</i>'. Feel 
+        free to view this file, but don't manually edit it 🤦‍♂️.
+      </p>
       <h3 id='air-conditioner-notes'>air-conditioner Notes</h3>
       <p>There looks to be a glitch in the Apple Home app in that nothing happens when setting the mode to Off when
         you&#39;ve turned the thermostat on by setting a specific temperature. Siri and other HomeKit apps don&#39;t
@@ -2404,7 +2415,7 @@
           </tr>
           <tr>
             <td><code>noHistory</code> <b>In BETA</b></td>
-            <td>Removes the Eve temperature and humidity history service from this accessory.</td>
+            <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes above.</a></td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -2560,7 +2571,7 @@
           </tr>
           <tr>
             <td><code>noHistory</code> <b>In BETA</b></td>
-            <td>Removes the Eve temperature and humidity history service from this accessory.</td>
+            <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes above</a>.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -2641,7 +2652,7 @@
           </tr>
           <tr>
             <td><code>noHistory</code> <b>In BETA</b></td>
-            <td>Removes the Eve temperature and humidity history service from this accessory.</td>
+            <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes above</a>.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
