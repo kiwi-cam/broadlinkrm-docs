@@ -2210,6 +2210,66 @@
             <td>-</td>
             <td>Yes</td>
           </tr>
+          <tr>
+            <td><code>temperatureAdjustment</code></td>
+            <td>The number of degrees that the reported temperature should be offset by.</td>
+            <td>3</td>
+            <td>0</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>temperatureUpdateFrequency</code></td>
+            <td>The frequency in seconds for which the temperature shall be requested.</td>
+            <td>20</td>
+            <td>10</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>w1DeviceID</code></td>
+            <td>Updates device current temperature from a Raspberry Pi Wire-1 thermometers (i.e. ds18b20). Value is the
+              Device ID.</td>
+            <td>28-0321544e531ff</td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>temperatureFilePath</code></td>
+            <td>A path to a file containing a number that represents the current temperature reported to the accessory.
+            </td>
+            <td>&quot;/Users/username/HomeKit/temperature/&quot;</td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>mqttURL</code></td>
+            <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a
+                href="#mqtt-temperature-support">MQTT notes above</a>.</td>
+            <td>mqtt://localhost</td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>mqttTopic</code></td>
+            <td>The mqtt topic for humidity data. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a>
+            </td>
+            <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>noHumidity</code></td>
+            <td>Removes Humidity information from the device.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>noHistory</code></td>
+            <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes</a>.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
         </tbody>
       </table>
       <h3 id='quot-data-quot-key-value-object-13'>&quot;data&quot; key-value object</h3>
