@@ -1208,21 +1208,21 @@
             <td>No</td>
           </tr>
           <tr>
-            <td><code>speedCycle</code><b><i>[IN BETA]</i></b></td>
+            <td><code>speedCycle</code></td>
             <td>Determines whether we should cycle the speeds or not.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
           </tr>
           <tr>
-            <td><code>defaultSpeedStep</code><b><i>[IN BETA]</i></b></td>
+            <td><code>defaultSpeedStep</code></td>
             <td>If set, sets the default speed for the fan when <code>speedSteps</code> is set and a value isn't already set.</td>
             <td>1</td>
             <td>-</td>
             <td>No</td>
           </tr>
           <tr>
-            <td><code>speedSteps</code><b><i>[IN BETA]</i></b></td>
+            <td><code>speedSteps</code></td>
             <td>If set, sets the amount the fanSpeed will step up/down by.</td>
             <td>3</td>
             <td>-</td>
@@ -2211,6 +2211,14 @@
             <td>No</td>
           </tr>
           <tr>
+            <td><code>turnOnWhenOff</code></td>
+            <td>If the unit state is off then an <code>on</code> code shall be sent before sending the
+              temperature code. On code is selected based on current Mode.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
             <td><code>defaultRotationSpeed</code></td>
             <td>Default fan speed to set when turning on device</td>
             <td>50</td>
@@ -2239,21 +2247,30 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td><code>temperatureAdjustment</code><b><i>[IN BETA]</i></b></td>
+            <td><code>temperatureAdjustment</code></td>
             <td>The number of degrees that the reported temperature should be offset by.</td>
             <td>3</td>
             <td>0</td>
             <td>No</td>
           </tr>
           <tr>
-            <td><code>temperatureUpdateFrequency</code><b><i>[IN BETA]</i></b></td>
+            <td><code>temperatureUpdateFrequency</code></td>
             <td>The frequency in seconds for which the temperature shall be requested.</td>
             <td>20</td>
             <td>10</td>
             <td>No</td>
           </tr>
           <tr>
-            <td><code>w1DeviceID</code><b><i>[IN BETA]</i></b></td>
+            <td><code>defaultNowTemperature</code></td>
+            <td>Some RM devices don&#39;t have a built in thermometer, when set this prevents the device thermometer
+              from being accessed and shows the provided value instead.<br />
+              <i>This will be replaced by <code>pseudoDeviceTemperature</code> in future.</i></td>
+            <td>22</td>
+            <td>0</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>w1DeviceID</code></td>
             <td>Updates device current temperature from a Raspberry Pi Wire-1 thermometers (i.e. ds18b20). Value is the
               Device ID.</td>
             <td>28-0321544e531ff</td>
@@ -2261,7 +2278,7 @@
             <td>No</td>
           </tr>
           <tr>
-            <td><code>temperatureFilePath</code><b><i>[IN BETA]</i></b></td>
+            <td><code>temperatureFilePath</code></td>
             <td>A path to a file containing a number that represents the current temperature reported to the accessory.
             </td>
             <td>&quot;/Users/username/HomeKit/temperature/&quot;</td>
@@ -2269,7 +2286,7 @@
             <td>No</td>
           </tr>
           <tr>
-            <td><code>mqttURL</code><b><i>[IN BETA]</i></b></td>
+            <td><code>mqttURL</code></td>
             <td>The URL to monitor for MQTT topics (below). Must be prefixed with mqtt://. Refer to <a
                 href="#mqtt-temperature-support">MQTT notes above</a>.</td>
             <td>mqtt://localhost</td>
@@ -2277,7 +2294,7 @@
             <td>No</td>
           </tr>
           <tr>
-            <td><code>mqttTopic</code><b><i>[IN BETA]</i></b></td>
+            <td><code>mqttTopic</code></td>
             <td>The mqtt topic for humidity data. Refer to <a href="#mqtt-temperature-support">MQTT notes above</a>
             </td>
             <td><code>"/mi_temp/LivingRoom/humidity"</code></td>
@@ -2285,14 +2302,14 @@
             <td>No</td>
           </tr>
           <tr>
-            <td><code>noHumidity</code><b><i>[IN BETA]</i></b></td>
+            <td><code>noHumidity</code></td>
             <td>Removes Humidity information from the device.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
           </tr>
           <tr>
-            <td><code>noHistory</code><b><i>[IN BETA]</i></b></td>
+            <td><code>noHistory</code></td>
             <td>Removes the Eve temperature and humidity history service from this accessory. Refer to <a href="#EveHistory-notes">History notes</a>.</td>
             <td>true</td>
             <td>false</td>
