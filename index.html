@@ -833,14 +833,14 @@
           </tr>
           <tr>
             <td><code>disableLogs</code></td>
-            <td>Disables the log output for this accessory.</td>
+            <td>Disables the log output for this accessory. This will set logLevel to <code>none</code>.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
           </tr>
           <tr>
             <td><code>debug</code></td>
-            <td>Outputs some additional logs, useful for figuring out issues.</td>
+            <td>Outputs some additional logs, useful for figuring out issues. This will set logLevel to <code>debug</code>.</td>
             <td>true</td>
             <td>false</td>
             <td>No</td>
@@ -848,7 +848,8 @@
           <tr>
             <td><code>logLevel</code> <b><i>[IN-BETA]</i></b></td>
             <td>Adjusts the amount of detail logged for the accessory. Accepted values (in order) are 
-              <code>none</code>, <code>critical</code>, <code>error</code>, <code>warning</code>, <code>info</code>, <code>debug</code>, <code>trace</code></td>
+              <code>none</code>, <code>critical</code>, <code>error</code>, <code>warning</code>, <code>info</code>, <code>debug</code>, <code>trace</code>. For more 
+              information see the <a href="#logLevels">logLevels</a> notes.</td>
             <td>debug</td>
             <td>info</td>
             <td>No</td>
@@ -859,6 +860,54 @@
             <td>192.168.1.32</td>
             <td>(auto-discovered)</td>
             <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id='logLevels'>logLevels</h2>
+      <p><code>logLevel</code> has been added to allow more control of the outputs this plugin writes to the logs.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>level</th>
+            <th>description</th>
+            <th>int value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>none</code></td>
+            <td>Nothing will be logged.</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td><code>critical</code></td>
+            <td>Only errors that prevent further execution will be logged.</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td><code>error</code></td>
+            <td>Critial errors and other known errors will be logged.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><code>warning</code></td>
+            <td>All errors above, and warnings of potential issues will be logged.</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>info</code></td>
+            <td>All errors and warnings will be logged, along with information useful to understanding processing. This should include status changes.</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>debug</code></td>
+            <td>All information above as well as useful output to identify processing. This includes status queries and changes.</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>trace</code></td>
+            <td>All outputs available will be logged</td>
+            <td>0</td>
           </tr>
         </tbody>
       </table>
