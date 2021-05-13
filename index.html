@@ -951,7 +951,8 @@
       <h2 id='logLevels'>logLevels</h2>
       <p><code>logLevel</code> has been added to allow more control of the outputs this plugin writes to the logs. The logLevel defined at each accessory
         applies only to that accessory. logLevel defined at the platform level applies to the broadlink devices and the base platform. For example, if you'd 
-        like to see the payloads sent to the devices, adjust at the platform; To see the commands an accessory sends, adjust the accessory.
+        like to see the payloads sent to the devices, adjust at the platform; To see the commands an accessory sends, adjust the accessory. The exception to
+        this is Learn accessories which will apply their logLevel to the device during a learn operation.
       </p>
       <table>
         <thead>
