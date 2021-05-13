@@ -524,6 +524,72 @@
         <a href='https://github.com/kiwi-cam/homebridge-broadlink-rm/issues' target='_blank'>GitHub</a> are usually the
         best places.
       </p>
+      <h2 id='platform-options'>Platform options</h2>
+      <p>The following options are available at the platform level of the config.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>key</th>
+            <th>description</th>
+            <th>example</th>
+            <th>default</th>
+            <th>required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>platform</code></td>
+            <td>Must be set to BroadlinkRM.</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>A friendly name for the platform to be used by Homebridge.</td>
+            <td>Broadlink RM</td>
+            <td>BroadlinkRM</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>hideScanFrequencyButton</code></td>
+            <td>If true, blocks the creation of the scan frequency accessory used to learn RF codes.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>hideLearnButton</code></td>
+            <td>If true, blocks the creation of the Learn accessory used to learn IR codes.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>hideWelcomeMessage</code></td>
+            <td>If true, stops the output/logging of the platform welcome message.</td>
+            <td>true</td>
+            <td>false</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>logLevel</code> <b><i>[IN-BETA]</i></b></td>
+            <td>Adjusts the amount of detail logged for the platform and device. 
+              Accepted values (in order) are none, critical, error, warning, info, debug, trace. For more information see the <a href="#logLevels">logLevels</a> notes.
+            <td>debug</td>
+            <td>info</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><code>hosts</code></td>
+            <td>If configured automatic discovery of Broadlink devices is disabled and the provided devices are added. For more information see the <a href="#device-discovery">Device Discovery</a> notes.</td>
+            <td><a href="#device-discovery">Notes</a></td>
+            <td>-</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+
       <h1 id='advanced-setup'>Advanced Setup</h1>
       <h2 id='multiple-broadlink-rm-devices'>Multiple Broadlink RM Devices</h2>
       <p>If you have multiple Broadlink RM devices (e.g. one in the bedroom, one in the lounge) then you can
@@ -864,7 +930,10 @@
         </tbody>
       </table>
       <h2 id='logLevels'>logLevels</h2>
-      <p><code>logLevel</code> has been added to allow more control of the outputs this plugin writes to the logs.</p>
+      <p><code>logLevel</code> has been added to allow more control of the outputs this plugin writes to the logs. The logLevel defined at each accessory
+        applies only to that accessory. logLevel defined at the platform level applies to the broadlink devices and the base platform. For example, if you'd 
+        like to see the payloads sent to the devices, adjust at the platform; To see the commands an accessory sends, adjust the accessory.
+      </p>
       <table>
         <thead>
           <tr>
