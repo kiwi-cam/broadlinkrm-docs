@@ -965,37 +965,37 @@
         <tbody>
           <tr>
             <td><code>none</code></td>
-            <td>Nothing will be logged.</td>
+            <td>Nothing will be logged. Specifies that a logging category should not write any messages.</td>
             <td>6</td>
           </tr>
           <tr>
             <td><code>critical</code></td>
-            <td>Only errors that prevent further execution will be logged.</td>
+            <td>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</td>
             <td>5</td>
           </tr>
           <tr>
             <td><code>error</code></td>
-            <td>Critial errors and other known errors will be logged.</td>
+            <td>Critial errors and logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure.</td>
             <td>4</td>
           </tr>
           <tr>
             <td><code>warning</code></td>
-            <td>All errors above, and warnings of potential issues will be logged.</td>
+            <td>All errors above, and logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop.</td>
             <td>3</td>
           </tr>
           <tr>
             <td><code>info</code></td>
-            <td>All errors and warnings will be logged, along with information useful to understanding processing. This should include status changes.</td>
+            <td>All errors and warnings will be logged, along with Logs that track the general flow of the application. These logs should have long-term value. This should include status changes.</td>
             <td>2</td>
           </tr>
           <tr>
             <td><code>debug</code></td>
-            <td>All information above as well as useful output to identify processing. This includes status queries and changes.</td>
+            <td>All information above as well as logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value. This includes status queries and changes.</td>
             <td>1</td>
           </tr>
           <tr>
             <td><code>trace</code></td>
-            <td>All outputs available will be logged</td>
+            <td>Logs that contain the most detailed messages. All outputs available will be logged.</td>
             <td>0</td>
           </tr>
         </tbody>
